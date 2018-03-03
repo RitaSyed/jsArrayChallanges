@@ -1,7 +1,6 @@
 // Challenge 1 ________________________________________________________
 
 // Given a string of 2 words, find the highest scoring word. Each letter of a word scores points according to it's position in the alphabet: a = 1, b = 2, c = 3 etc. All letters will be lowercase there will be no punctuation. Display (id='challenge-1') the word that is the highest scoring. If two words score the same, display the word that appears earliest in the original string.
-
 // var challengeOneInput = "jumbo shrimp";  //jumbo=61, shrimp=83 should display shrimp
 
 var challengeOneInput = "jumbo shrimp";  //jumbo=61, shrimp=83 should display shrimp
@@ -66,7 +65,6 @@ var array2 = [1];
 //display = [2]
 
 // Example 2:
-
 var array1 = [1,2, 4, 7, 5, 9];
 var array2 = [5, 9, 2];
 //display = [1, 4, 7]
@@ -79,3 +77,21 @@ for(var b=0; b<array1.length; b++){
     }
 }
 challenge5Answer.innerHTML += "<h5>" + resultArray + "</h5>";
+
+// Challenge 6______________________________________________________
+// You're working in a number zoo, and it seems that one of the numbers has gone missing! Given an array of numbers. The numbers will be unsorted values between 1 and one more than the length of the array. No values will be repeated within the array. displaythe number that is missing.
+
+// Examples:
+var test1 = [1,3]; // 2
+var test2 = [2,3,4]; // 1
+var test3 = [13,11,10,3,2,1,4,5,6,9,7,8]; // 12
+var answer = document.getElementById("challenge-6");
+var maxvalue = test3.length+1;
+var challenge6Answer;
+
+for(var i=1; i<maxvalue; i++){
+  if(test3.indexOf(i) == -1){
+    challenge6Answer= [i];
+  }
+}
+answer.innerHTML = "<h5>" + challenge6Answer + "</h5>";
